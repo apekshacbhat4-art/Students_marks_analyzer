@@ -12,20 +12,21 @@ typedef struct student_details{
     char gender;
     char grade;
     char name[100];
-    char usn[10];
-    char course[10];
+    char usn[20];
+    char course[20];
     struct student_marks M[3];
     float avg;
 }Stdet;
 void average(Stdet *p,int n)
 {
-    int i,j,sum=0;
+    int i,j;
+    float sum=0;
     for(i=0;i<n;i++)
     {
         sum=0;
         for(j=0;j<3;j++)
-        sum+=(*p).M[j].marks;
-        (*p).avg=((float)sum/3);
+        sum+=p->M[j].marks;
+        p->avg=sum/3.0;
         p++;
     }
 }
@@ -35,23 +36,23 @@ void GRADES(Stdet *p,int n)
     for(i=0;i<n;i++)
     {
         if(p->avg >= 90 && p->avg <= 100)
-        p->grade='O';
+           p->grade='O';
         else if(p->avg >= 80 && p->avg <= 89)
-        p->grade='A';
+           p->grade='A';
         else if(p->avg >= 70 && p->avg <= 79)
-        p->grade='B';
+           p->grade='B';
         else if(p->avg >= 60 && p->avg <= 69)
-        p->grade='C';
+           p->grade='C';
         else if(p->avg >= 50 && p->avg <= 59)
-        p->grade='D';
+           p->grade='D';
         else if(p->avg >= 40 && p->avg <= 49)
-        p->grade='E';
+           p->grade='E';
         else
-        p->grade='F';
+           p->grade='F';
       p++;
     }
 }
-void main()
+int main()
 {
     int n,i,j;
     printf("Enter number of students: ");
@@ -101,4 +102,6 @@ void main()
        p++;
        
     }
+    return 0;
 }
+
