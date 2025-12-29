@@ -16,7 +16,7 @@ To run this project on your computer:
    git clone https://github.com/apekshacbhat4-art/Students_marks_analyzer.git
 2. **Compile the code:**
     ```bash
-   gcc STUDENT_DETAILS.c -o analyzer
+   gcc main.c -o analyzer
 3. **Run the application:**
     ```bash
    ./analyzer
