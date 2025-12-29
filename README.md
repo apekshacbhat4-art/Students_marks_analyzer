@@ -1,4 +1,4 @@
-# Students_marks_analyzer
+# Students Marks Analyzer
 
 
 
@@ -20,7 +20,7 @@ Concepts used:
 
 
 
-• Structures ,nested structures 
+• Structures and nested structures 
 
 
 
